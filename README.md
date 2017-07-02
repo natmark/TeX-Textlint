@@ -1,6 +1,15 @@
 # TeX-Textlint
 TeX auto calibration using textlint + prh
 
+## CI Workflow
+|Input/Output| Command | 
+|:------:|:-----: |
+|main.tex||
+|↓|pandoc|
+|main.md|| 
+|↓|textlint|
+|linter result| |
+
 ## prh-example
 https://github.com/azu/prh-textlint-example
 
