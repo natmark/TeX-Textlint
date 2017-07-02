@@ -1,0 +1,12 @@
+# prh version
+version: 1
+rules:
+    - expected: 学籍番号
+      pattern: 学生番号
+
+    # punctuation marks
+    - expected: ","
+      pattern: "、"
+
+    - expected: ".." # escape
+      pattern: 。
