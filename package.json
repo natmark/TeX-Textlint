@@ -4,7 +4,7 @@
   "description": "TeX auto calibration using textlint + prh",
   "main": "index.js",
   "scripts": {
-    "textlint": "./pandoc main.tex -o main.md && $(npm bin)/textlint main.md && exit 1"
+    "textlint": "pandoc main.tex -o main.md && $(npm bin)/textlint main.md && exit 1"
   },
   "author": "",
   "devDependencies": {
