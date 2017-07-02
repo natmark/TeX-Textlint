@@ -1,0 +1,14 @@
+{
+  "name": "tex-textlint",
+  "version": "1.0.0",
+  "description": "TeX auto calibration using textlint + prh",
+  "main": "index.js",
+  "scripts": {
+    "textlint": "pandoc main.tex -o main.md && $(npm bin)/textlint main.md"
+  },
+  "author": "",
+  "devDependencies": {
+    "textlint": "^8.2.1",
+    "textlint-rule-prh": "^4.0.1"
+  }
+}
