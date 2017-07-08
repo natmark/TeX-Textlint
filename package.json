@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "TeX auto calibration using textlint + prh",
   "main": "index.js",
+  "config": {
+          "texpath": "main.tex"
+  },
   "scripts": {
-    "textlint": "pandoc main.tex -o main.md && $(npm bin)/textlint main.md"
+    "textlint-check": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint output.txt; rm ./output.txt",
+    "textlint-fix": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint --fix output.txt && cp output.txt ${npm_package_config_texpath}; rm ./output.txt"
   },
   "author": "",
   "devDependencies": {

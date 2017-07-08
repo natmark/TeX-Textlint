@@ -3,10 +3,9 @@ os: osx
 node_js:
     -   "6"
 before_script:
-    -   brew install pandoc
     -   npm install
 script:
-    -   npm run --silent textlint
+    -   npm run --silent textlint-check
 cache:
     directories:
         -   node_modules
