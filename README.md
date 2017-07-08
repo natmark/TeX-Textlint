@@ -5,8 +5,8 @@ TeX auto calibration using textlint + prh
 |Input/Output| Command | 
 |:------:|:-----: |
 |main.tex||
-|↓|pandoc|
-|main.md|| 
+|↓|cp|
+|output.txt|| 
 |↓|textlint|
 |linter result| |
 
@@ -14,8 +14,6 @@ TeX auto calibration using textlint + prh
 https://github.com/azu/prh-textlint-example
 
 ## Reference
-### Pandoc
-https://github.com/jgm/pandoc
 ### textlint
 https://github.com/textlint/textlint
 ### textlint-rule-prh
