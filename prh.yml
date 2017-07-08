@@ -1,12 +1,25 @@
 # prh version
 version: 1
 rules:
-    - expected: 学籍番号
-      pattern: 学生番号
+    # よくある表記揺れ
+    - expected: "スマートフォン"
+      patterns:
+          - "スマホ"
 
-    # punctuation marks
+    - expected: "iOS"
+      patterns:
+          - "IOS"
+          - "ios"
+
+    - expected: "リーダー"
+      patterns:
+          - "リーダ(?!ー)"
+
+    # 句読点
     - expected: ","
-      pattern: "、"
+      patterns:
+          - "、"
+          - "，"
 
     - expected: ".." # escape
-      pattern: 。
+      pattern: "。"
