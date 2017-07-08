@@ -7,8 +7,8 @@
           "texpath": "main.tex"
   },
   "scripts": {
-    "textlint-check": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint output.txt; rm ./output.txt",
-    "textlint-fix": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint --fix output.txt && cp output.txt ${npm_package_config_texpath}; rm ./output.txt"
+    "textlint-check": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint output.txt && { rm output.txt ; exit 0 ; } || { rm output.txt ; exit 1 ; }",
+    "textlint-fix": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint --fix output.txt && cp output.txt ${npm_package_config_texpath} && { rm output.txt ; exit 0 ; } || { rm output.txt ; exit 1 ; }"
   },
   "author": "",
   "devDependencies": {
