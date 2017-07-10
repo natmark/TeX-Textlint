@@ -2,9 +2,9 @@
 version: 1
 rules:
     # よくある表記揺れ
-    - expected: "スマートフォン"
+    - expected: "アプリケーション"
       patterns:
-          - "スマホ"
+          - "アプリ(?!ケーション)"
 
     - expected: "iOS"
       patterns:
@@ -21,5 +21,7 @@ rules:
           - "、"
           - "，"
 
-    - expected: "."
-      pattern: "。"
+    - expected: "\\." # escape
+      patterns: 
+          - "。"
+          - "．"
